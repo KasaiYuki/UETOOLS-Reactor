@@ -1,8 +1,5 @@
 *.swp
 *~
-*.hdf
-*.hdf5
-*.h5
 .DS_Store
 uetools/ignore/
 requirements.txt
