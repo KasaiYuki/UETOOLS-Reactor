@@ -18,20 +18,23 @@ def setGrid(aeqdsk='aeqdsk', geqdsk='geqdsk', plot_true=True):
     com.isudsym = 1 # up-down symmetric
 
     geqdsk='MANTA_optimized__11122023'
-    aeqdsk='aeqdsk'
+    aeqdsk='aeqdsk' #aeqdsk is a placeholder, where the only values are the (R,Z) coords of the strike-points on L20
+    # (format: r_inner z_inner r_outer z_outer, all in cm in EFIT coordinates)
 
     if aeqdsk:
         com.aeqdskfname = aeqdsk 
     if geqdsk:
         com.geqdskfname = geqdsk
 
+    scaleFactor = 0.5
+    
     flx.xcutoff1 = 0.25 # set inner cutoff on the eqdsk data
     flx.ycutoff1 = 2.20 #1.50 #-2.3 #0.0 #1.50 # set lower cutoff on the eqdsk data
-    flx.psi0min1 = 0.968 # normalized flux on core bndry
-    flx.psi0min2 = 0.93 # normalized flux on pf bndry
-    flx.psi0sep = 1.0001 # normalized flux at separatrix
-    flx.psi0max = 1.078 # normalized flux on outer wall bndry
-    flx.psi0max_inner = 1.078
+    flx.psi0min1 = 0.968/scaleFactor # normalized flux on core bndry
+    flx.psi0min2 = 0.93/scaleFactor # normalized flux on pf bndry
+    flx.psi0sep = 1.0001/scaleFactor # normalized flux at separatrix
+    flx.psi0max = 1.078/scaleFactor # normalized flux on outer wall bndry
+    flx.psi0max_inner = 1.078/scaleFactor
 
     bbb.ngrid = 1 # number of mesh sequenc. (always set to 1)
     com.nxleg[0,0] = 16 # pol. mesh pts from inner plate to x-point
@@ -53,21 +56,22 @@ def setGrid(aeqdsk='aeqdsk', geqdsk='geqdsk', plot_true=True):
     # Set correct strike points
     grd.isspnew = 1 # =1 for user-defined strike point
     grd.isztest = [2,2] # =0 for testing on rstrike only, =2 for testing on zstrike only and 2 elements for inner/outer strike points
-    grd.zstrike[0] = 2.32#2.375#2.35#2.32 # inner R strike-point
-    grd.zstrike[1] = 2.52#2.53#2.55#2.60#2.65 # outer Z strike-point
+    grd.zstrike[0] = 2.1#2.375#2.35#2.32 # inner R strike-point
+    grd.zstrike[1] = 1.05#2.53#2.55#2.60#2.65 # outer Z strike-point
 
     # Set options for grid generator
     flx.alfcy = 2.1
     flx.alfcy_inner = 2.1
-    grd.slpxt = 1.2
+    grd.slpxt = 1.2 
     grd.kxmesh = 1
     flx.altsearch = 0
     flx.istchkon = 1
     
     
     flx.flxrun() # required for next line
-    # plt.plot(com.xcurve,com.ycurve,'.')
-    # plt.show()
+    plt.xlim([1.4,2.8])
+    plt.plot(com.xcurve,com.ycurve,'.')
+    plt.show()
     grd.grdrun() # generate gridue file 
 
     com.nx=com.nxm
@@ -81,6 +85,7 @@ def setGrid(aeqdsk='aeqdsk', geqdsk='geqdsk', plot_true=True):
     
     #non-orthog grid
     com.ismmon=3; grd.istream=0; grd.iplate=1; grd.nsmooth=5; grd.wtmesh1=0.75; grd.dmix0=1.0
+    grd.iplate=0
     #plate_file = 'plate.ARC_NT_HV.py'
     #plate_file = 'plate.ARC_NT_HVslant.py'
     #plate_file = 'plate.ARC_NT_VslantVslant.py'
@@ -98,7 +103,6 @@ def setGrid(aeqdsk='aeqdsk', geqdsk='geqdsk', plot_true=True):
     com.isnonog=1; bbb.methg=66
     if plot_true:
         pm.plotmesh(iso=1)
-
 
 def setBoundaryConditions():
     global bbb
