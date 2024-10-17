@@ -28,8 +28,8 @@ def setGrid(steps=4, plot=True):
     com.isudsym = 1 # up-down symmetric - include in input too
 
     # Set up EFIT equilibrium
-    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-09-25_v5_DB'
-    com.aeqdskfname[0] = 'aeqdsk'
+    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-16_v8_FS_oval.geqdsk'
+    com.aeqdskfname[0] = 'aeqdsk_2'
 
     '''
     com.geqdskfname[0] = 'MANTA_optimized__11122023'
@@ -48,7 +48,7 @@ def setGrid(steps=4, plot=True):
         flx.psi0max_outer = 1.06 # Inboard side
         flx.psi0max = flx.psi0max_outer # Don't change this
         # !!! psi0sep HAD TO BE MODIFIED ACCORDING TO THE GEQDSK
-        flx.psi0sep = 1.0101 # normalized flux at separatrix
+        flx.psi0sep = 1.01015 # normalized flux at separatrix
         # Normally, this variable is just set to 1+1e-4 to capture
         # a flux surface just outside the separatrix. In this case,
         # it appears the geqdsk file throws off normalization. 
@@ -101,7 +101,7 @@ def setGrid(steps=4, plot=True):
     """ DISTORT MESH TO CONFORM TO PLATES """
     if steps>2:
         # !!! Replace below with your coding !!!
-        import plates as pl
+        import plates as pl #imports plates.py
         # Store lengths of arrays
         grd.nplate1 = len(pl.rplate1)
         grd.nplate2 = len(pl.rplate2)
@@ -122,7 +122,7 @@ def setGrid(steps=4, plot=True):
         # Set up a strike-point search
         grd.isspnew = 1
         grd.isztest = 0
-        grd.rstrike = [2.11, 2.42] #""" !!! Change !!! """
+        grd.rstrike = [2.2152, 2.585] #""" !!! Change !!! """
         # Ensure the rstrike is as close to the plate-intersect with the grid in the previous plot
 
         grd.grdrun() # generate gridue file 

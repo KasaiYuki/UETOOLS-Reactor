@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "initial.hdf5"
+savefile: "reconverged_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -14,7 +14,7 @@ grid:
     geometry: "snull" #
     isnonog: 1  # Evaluates nonorthogonal fluxes on grid
     gengrid: 0  # Read grid from file
-    GridFileName: "gridue_orthogonal.hdf5" # Path to grid file
+    GridFileName: "gridue_shaped.hdf5" # Path to grid file
     isgriduehdf5: 1 # Switch whether to read HDF5 gridue file
     isudsym: 1
     nxleg:
