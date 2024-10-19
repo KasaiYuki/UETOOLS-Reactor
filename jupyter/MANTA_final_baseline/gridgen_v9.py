@@ -28,7 +28,7 @@ def setGrid(steps=4, plot=True):
     com.isudsym = 1 # up-down symmetric - include in input too
 
     # Set up EFIT equilibrium
-    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-16_v8_FS_oval.geqdsk'
+    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-17_v9_FS_oval.geqdsk'
     com.aeqdskfname[0] = 'aeqdsk_2'
 
     '''
@@ -126,10 +126,10 @@ def setGrid(steps=4, plot=True):
         # Ensure the rstrike is as close to the plate-intersect with the grid in the previous plot
 
         grd.grdrun() # generate gridue file 
-        write_gridue("griduev9.hdf5") # Write HDF5 gridue
+        write_gridue("gridue_v9.hdf5") # Write HDF5 gridue
 
         if plot:
-            f = c.plot.gridue('griduev9.hdf5', plates=False)
+            f = c.plot.gridue('gridue_v9.hdf5', plates=False)
             f.get_axes()[0].plot(grd.rplate1, grd.zplate1, 'r-')
             f.get_axes()[0].plot(grd.rplate2, grd.zplate2, 'b-')
 
