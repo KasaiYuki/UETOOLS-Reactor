@@ -29,7 +29,7 @@ def setGrid(steps=4, plot=True):
 
     # Set up EFIT equilibrium
     com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-17_v9_FS_oval.geqdsk'
-    com.aeqdskfname[0] = 'aeqdsk_2'
+    com.aeqdskfname[0] = 'aeqdsk_v9_open'
 
     '''
     com.geqdskfname[0] = 'MANTA_optimized__11122023'
@@ -101,7 +101,7 @@ def setGrid(steps=4, plot=True):
     """ DISTORT MESH TO CONFORM TO PLATES """
     if steps>2:
         # !!! Replace below with your coding !!!
-        import plates as pl #imports plates.py
+        import plates_open as pl #imports plates.py
         # Store lengths of arrays
         grd.nplate1 = len(pl.rplate1)
         grd.nplate2 = len(pl.rplate2)
