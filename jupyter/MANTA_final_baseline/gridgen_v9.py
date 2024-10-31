@@ -42,7 +42,7 @@ def setGrid(steps=4, plot=True):
     """ FIRST, SET UP FLUX SURFACES """
     if steps>0:
         # Define flux contour boundaries
-        flx.psi0min1 = 0.968 # normalized flux on core bndry
+        flx.psi0min1 = 0.968 # normalized flux on core bndry - connect with core boundary max
         flx.psi0min2 = 0.93 # normalized flux on pf bndry
         flx.psi0max_inner = 1.078 # Outboard side
         flx.psi0max_outer = 1.06 # Inboard side

@@ -1,12 +1,12 @@
 
 casename: "testcase"
-savefile: "reconverged_v9_vertical_last_ii2.hdf5"
+savefile: "reconverged_v9_diag_p20_imp_last_ii2.hdf5"
 restart: 1
 
 species:
     ngsp: 1     # No. of gas species
     nhsp: 2     # No. of hydrogenic species
-    isimpon: 0  # Turns on impurity model no 6 (force-balance)
+    isimpon: 2  # Turns on impurity model no 6 (force-balance)
 
     
 grid:
@@ -14,7 +14,7 @@ grid:
     geometry: "snull" #
     isnonog: 1  # Evaluates nonorthogonal fluxes on grid
     gengrid: 0  # Read grid from file
-    GridFileName: "gridue_v9_shaped_vertical" # Path to grid file
+    GridFileName: "gridmorph/progress53p837" # Path to grid file
     isgriduehdf5: 1 # Switch whether to read HDF5 gridue file
     isudsym: 1
     nxleg:
@@ -35,14 +35,16 @@ solver:
 
 
 boundaryconditions:
+    gamsec: 0 # secondary electron emission
+    isphiofft: 0 # should fix straitions
     isnicore: 
         0: 1
     ncore:
         0: 5.e19
     iflcore: 1
     # pcoree&pcorei is psol from core team?
-    pcoree : 5.e+6 #core elec power if iflcore:1 
-    pcorei : 5.e+6 #core ion power if iflcore:1
+    pcoree : 20.e+6 #core elec power if iflcore:1 
+    pcorei : 20.e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
     istewc: 2 #linear radial extrapolation condition for Te on outer wall
@@ -110,8 +112,8 @@ physics:
     isupwo: 1
     
 
-carbon:
-    afracs: 0
+neon:
+    afracs: 3e-3
 
 # transport coefficients
 diffusivities:
@@ -171,7 +173,7 @@ differencing:
 
 equations:
     isphion: 0
-    isphiofft: 1
+    isphiofft: 0 # should fix straitions
     isupon: 1
     isnion: 1
     isteon: 1
