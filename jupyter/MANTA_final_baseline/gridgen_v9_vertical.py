@@ -92,10 +92,10 @@ def setGrid(steps=4, plot=True):
        
 
         grd.grdrun() # generate gridue file 
-        write_gridue("gridue_v9_orthogonal.hdf5") # Write HDF5 gridue
+        write_gridue("reconverged_v9_diag_p20_imp_integrated.hdf5") # Write HDF5 gridue
         c.reload() # Update Case arrays to reflect zshift
         if plot:
-            f = c.plot.gridue('gridue_v9_orthogonal.hdf5', plates=False)
+            f = c.plot.gridue('reconverged_v9_diag_p20_imp_integrated.hdf5', plates=False)
 
 
     """ DISTORT MESH TO CONFORM TO PLATES """
@@ -125,10 +125,10 @@ def setGrid(steps=4, plot=True):
         # Ensure the rstrike is as close to the plate-intersect with the grid in the previous plot
 
         grd.grdrun() # generate gridue file 
-        write_gridue("gridue_v9_shaped_vertical2.hdf5") # Write HDF5 gridue
+        write_gridue("reconverged_v9_diag_p20_imp_integrated.hdf5") # Write HDF5 gridue
 
         if plot:
-            f = c.plot.gridue('gridue_v9_shaped_vertical2.hdf5', plates=False)
+            f = c.plot.gridue('reconverged_v9_diag_p20_imp_integrated.hdf5', plates=False)
             f.get_axes()[0].plot(grd.rplate1, grd.zplate1, 'r-')
             f.get_axes()[0].plot(grd.rplate2, grd.zplate2, 'b-')
 
