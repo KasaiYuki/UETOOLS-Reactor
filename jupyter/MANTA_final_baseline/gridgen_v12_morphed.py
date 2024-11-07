@@ -48,7 +48,7 @@ def setGrid(steps=4, plot=True):
         flx.psi0max_outer = 1.06 # Inboard side
         flx.psi0max = flx.psi0max_outer # Don't change this
         # !!! psi0sep HAD TO BE MODIFIED ACCORDING TO THE GEQDSK
-        flx.psi0sep = 1+2e-3+0e-4  # normalized flux at separatrix
+        flx.psi0sep = 1.001953055#1+2e-3-1e-4+5e-5  # normalized flux at separatrix
         # Normally, this variable is just set to 1+1e-4 to capture
         # a flux surface just outside the separatrix. In this case,
         # it appears the geqdsk file throws off normalization. 
