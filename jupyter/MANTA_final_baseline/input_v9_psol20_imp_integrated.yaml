@@ -43,8 +43,8 @@ boundaryconditions:
         0: 2.e20
     iflcore: 1
     # pcoree&pcorei is psol from core team?
-    pcoree : 20.e+6 #core elec power if iflcore:1 
-    pcorei : 20.e+6 #core ion power if iflcore:1
+    pcoree : 5.e+6 #core elec power if iflcore:1 
+    pcorei : 5.e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
     istewc: 2 #linear radial extrapolation condition for Te on outer wall
@@ -66,8 +66,8 @@ boundaryconditions:
     istgpfc : 0
 
     #From Core Team
-    tcoree: 1024.21
-    tcorei: 909.469
+    #tcoree: 1024.21
+    #tcorei: 909.469
     #ncoree: 2.2766.e+20
     #ncorei: 2.2238.e+20
     
