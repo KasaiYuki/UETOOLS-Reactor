@@ -28,7 +28,7 @@ def setGrid(steps=4, plot=True):
     com.isudsym = 1 # up-down symmetric - include in input too
 
     # Set up EFIT equilibrium
-    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-17_v9_FS_oval.geqdsk'
+    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-10-17_v9_FS_NEW_oval.geqdsk'
     com.aeqdskfname[0] = 'aeqdsk_v9_vertical'
 
     '''
