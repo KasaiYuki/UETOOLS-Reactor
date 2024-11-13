@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "reconverged_v9_diag_p20_imp_integrated_ii2.hdf5"
+savefile: "v9_pe5_pi5__n2e20_imp0_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -119,7 +119,7 @@ physics:
     
 
 neon:
-    afracs: 2.e-3
+    # afracs: 2.e-3
 
 # transport coefficients
 diffusivities:
