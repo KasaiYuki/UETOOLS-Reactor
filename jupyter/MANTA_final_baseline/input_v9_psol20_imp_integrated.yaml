@@ -40,10 +40,10 @@ boundaryconditions:
     isnicore: 
         0: 1
     ncore:
-        0: 2.e20
+        0: 2.e+20
     iflcore: 1
     # pcoree&pcorei is psol from core team?
-    pcoree : 5.e+6 #core elec power if iflcore:1 
+    pcoree : 5.e+6 #core elec power if iflcore:1 IF UEDGE ALREADY DIVIDES THIS BY 2 ASSUMING 2 DIVERTORS, THESE SHOULD BE 10
     pcorei : 5.e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
@@ -119,7 +119,7 @@ physics:
     
 
 neon:
-    afracs: 3e-3
+    afracs: 2.e-3
 
 # transport coefficients
 diffusivities:
