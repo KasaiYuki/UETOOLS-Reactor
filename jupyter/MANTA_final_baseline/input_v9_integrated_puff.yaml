@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "reconverged_v9_integrated_puff_last_ii2.hdf5"
+savefile: "reconverged_v9_integrated_puff2_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -144,21 +144,22 @@ fluxlim:
     lgtmax: 0.05
 
 sources:
-    nwsor: 2 # Number of individual sources
+    #Puff: albedo=1.0,igaso>0, pump: albedo~0.3,igaso=0
+    nwsor: 2 # Number of individual sources 
     #           PUFF        PUMP
-    issorlb: [  1,          1   ] # Measured from left boundary?
+    issorlb: [  0,          1   ] # Measured from left boundary?
     # OUTER (big w legs)
     jxsoro: [   1,          1   ] # 0=inner mesh region, 1=outer
     matwso: [   1,          1   ] # Switch for material limits (use 1)
     wgaso:  [   0.5,        0.3 ] # Source/sink width
-    xgaso:  [   0.4,        0.1 ] # Sink/source location from boundary 
+    xgaso:  [   0.7,        0.1 ] # Sink/source location from boundary 
     albdso: [   1.0,        1.0 ] # Pump albedo
     igaso:  [   300,        0   ] # Gas source strength (Amps)
     # INNER (little w legs)
     jxsori: [   1,          1   ] # 0=inner mesh region, 1=outer
     matwsi: [   1,          1   ] # Switch for material limites (use 1)
     wgasi:  [   0.3,        0.05] # Source/sink width
-    xgasi:  [   0.1,        0.0 ] # Sink/source location from boundary
+    xgasi:  [   0.8,        0.0 ] # Sink/source location from boundary
     albdsi: [   1.0,        0.3 ] # Pump albedo
     igasi:  [   0,          0   ] # Gas source strength (Amps)
 

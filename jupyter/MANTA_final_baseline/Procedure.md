@@ -10,3 +10,9 @@
 * Converge with dtreal=1e-10, if doesn't work, set bbb.gamsec = 1 (for striations issue), bbb.isbcwdt = 1 (for converging errors)
 * If the initial fnrm starts increasing rapidly when time-step is ~1e-8
 * If converged, change input YAML file to point to new save file, if working in the same notebook shouldn't need to
+
+# Notes
+* Puffing increases density, decreases temperature
+* Pumping decreases density, increases temperature
+* reducing particle confinement time (lower d), don't need to sustain a high density
+* transport coefficient changes flux
