@@ -14,7 +14,7 @@ grid:
     geometry: "snull" #
     isnonog: 1  # Evaluates nonorthogonal fluxes on grid
     gengrid: 0  # Read grid from file
-    GridFileName: "gridmorph/progress53p837" # Path to grid file
+    GridFileName: "gridmorph2/SUCCESS.hdf5" # Path to grid file
     isgriduehdf5: 1 # Switch whether to read HDF5 gridue file
     isudsym: 1
     nxleg:

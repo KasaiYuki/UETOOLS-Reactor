@@ -101,7 +101,7 @@ def setGrid(steps=4, plot=True):
     """ DISTORT MESH TO CONFORM TO PLATES """
     if steps>2:
         # !!! Replace below with your coding !!!
-        import plates_open as pl #imports plates.py
+        import plates_long as pl #imports plates.py
         # Store lengths of arrays
         grd.nplate1 = len(pl.rplate1)
         grd.nplate2 = len(pl.rplate2)
@@ -126,10 +126,10 @@ def setGrid(steps=4, plot=True):
         # Ensure the rstrike is as close to the plate-intersect with the grid in the previous plot
 
         grd.grdrun() # generate gridue file 
-        write_gridue("gridue_v9.hdf5") # Write HDF5 gridue
+        write_gridue("gridue_v9_long.hdf5") # Write HDF5 gridue
 
         if plot:
-            f = c.plot.gridue('gridue_v9.hdf5', plates=False)
+            f = c.plot.gridue('gridue_v9_long.hdf5', plates=False)
             f.get_axes()[0].plot(grd.rplate1, grd.zplate1, 'r-')
             f.get_axes()[0].plot(grd.rplate2, grd.zplate2, 'b-')
 
