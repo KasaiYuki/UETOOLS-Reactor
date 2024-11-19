@@ -126,8 +126,6 @@ diffusivities:
     isbohmcalc: 0
     difutm: 0.5
     kyi: 0
-    
-    
 
 fluxlim:
     isflxlde: 1
