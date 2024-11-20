@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "reconverged_v12_vert_last_ii2.hdf5"
+savefile: "reconverged_v12_vert_dif1_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -43,8 +43,8 @@ boundaryconditions:
         0: 2.e+20
     iflcore: 1
     # pcoree&pcorei is psol from core team?
-    pcoree : 5.e+6 #core elec power if iflcore:1 IF UEDGE ALREADY DIVIDES THIS BY 2 ASSUMING 2 DIVERTORS, THESE SHOULD BE 10
-    pcorei : 5.e+6 #core ion power if iflcore:1
+    pcoree : 4.e+6 #core elec power if iflcore:1 
+    pcorei : 4.e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
     istewc: 2 #linear radial extrapolation condition for Te on outer wall
