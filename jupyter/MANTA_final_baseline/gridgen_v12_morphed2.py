@@ -3,7 +3,7 @@ from uedge.gridue import write_gridue
 from uetools import Case
 from Forthon import gchange
 from numpy import array, pi
-import plates_morphed as pl #imports plates.py
+import plates_v12_morphed as pl #imports plates.py
 
 def setGrid(steps=4, plot=True):
     """ Generates a HDF5/ASCII grid
@@ -28,7 +28,7 @@ def setGrid(steps=4, plot=True):
     com.isudsym = 1 # up-down symmetric - include in input too
 
     # Set up EFIT equilibrium
-    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-11-06_v12_AL_FS-no_trunc.geqdsk'
+    com.geqdskfname[0] = 'FDC24_TokaMaker_2024-11-15_v12p1_AL_FS_truncate_false.geqdsk'
     com.aeqdskfname[0] = 'aeqdsk_v12_morphed.txt'
 
     '''
