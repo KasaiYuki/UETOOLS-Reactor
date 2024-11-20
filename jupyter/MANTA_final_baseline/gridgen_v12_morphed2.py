@@ -2,8 +2,8 @@ from uedge import *
 from uedge.gridue import write_gridue
 from uetools import Case
 from Forthon import gchange
-from numpy import array
-import plates_vertical as pl #imports plates.py
+from numpy import array, pi
+import plates_morphed as pl #imports plates.py
 
 def setGrid(steps=4, plot=True):
     """ Generates a HDF5/ASCII grid
@@ -50,8 +50,7 @@ def setGrid(steps=4, plot=True):
         # !!! psi0sep HAD TO BE MODIFIED ACCORDING TO THE GEQDSK
         flx.readefit()          # Read the efit data
         flx.psifac = 1.0001     # Set to value close to unity to identify separatrix
-        flx.psi0sep = flx.psifac*(com.sibdry1-com.simagx)/(com.sibdry-com.simagx)  # normalized flux at separatrix
-        # flx.psi0sep = 1+1e-3 # normalized flux at separatrix
+        flx.psi0sep = flx.psifac*(com.sibdry1-com.simagx)/(com.sibdry-com.simagx)  # normalized flux at separatrix # normalized flux at separatrix
         # Normally, this variable is just set to 1+1e-4 to capture
         # a flux surface just outside the separatrix. In this case,
         # it appears the geqdsk file throws off normalization. 
@@ -65,10 +64,14 @@ def setGrid(steps=4, plot=True):
                           # If error is thrown, modify accordingly
         com.nycore[0] = 17
 
-        flx.alfcy = 2.1 # Radial flux-tube distribtuion: higher value, more 
+        flx.alfcy = 2.2 # Radial flux-tube distribtuion: higher value, more 
                         # compressed around separatrix
         flx.altsearch = 1 # PFR search option, no touch
 
+        flx.istchkon=1
+        flx.dtheta_exclude[0]    = .75*pi
+        flx.dtheta_overlap_pf[0] = .05*pi
+        flx.dtheta_overlap_sol[0] =0.25*pi
      
         flx.flxrun() # Generate flux surface based on the above
         if plot:
@@ -81,10 +84,10 @@ def setGrid(steps=4, plot=True):
 
     """ SECOND, SET UP THE POLOIDAL ROWS """
     if steps>1:
-        com.nxleg[0] = [8,12] # No cells in inner/outer leg
+        com.nxleg[0] = [16,24] # No cells in inner/outer leg
         com.nxcore[0] = [14,10] # No cells in inner/outer core region
         grd.kxmesh = 1 # Poloidal cell distribution model: =1 uses slpxt
-        grd.slpxt = 0.6 # Cell compression factor at plates: higher values, more compressed
+        grd.slpxt = 1.2 # Cell compression factor at plates: higher values, more compressed
         com.ismmon=3 # Controls mesh generation
                       # =1: compressed distribution of mesh on each surface
                       # =2: standard distribution of mesh on each surface
@@ -124,7 +127,7 @@ def setGrid(steps=4, plot=True):
         # Set up a strike-point search
         grd.isspnew = 1
         grd.isztest = 0
-        grd.rstrike = [2.2152, 2.585] #""" !!! Change !!! """
+        grd.rstrike = [2.26220, 2.6846] #""" !!! Change !!! """
         # Ensure the rstrike is as close to the plate-intersect with the grid in the previous plot
 
         grd.grdrun() # generate gridue file 
