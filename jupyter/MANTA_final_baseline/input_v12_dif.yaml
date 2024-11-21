@@ -1,12 +1,12 @@
 
 casename: "testcase"
-savefile: "reconverged_v12_vert_dif1_last_ii2.hdf5"
+savefile: "reconverged_v12_p393_n225_imp1e4_d0.05_ke0.06_ki0.1_last_ii2.hdf5"
 restart: 1
 
 species:
     ngsp: 1     # No. of gas species
     nhsp: 2     # No. of hydrogenic species
-    isimpon: 0  # Turns on impurity model no 6 (force-balance)
+    isimpon: 2  # Turns on impurity model no 6 (force-balance)
 
     
 grid:
@@ -40,11 +40,11 @@ boundaryconditions:
     isnicore: 
         0: 1
     ncore:
-        0: 2.e+20
+        0: 2.38e+20
     iflcore: 1
-    # pcoree&pcorei is psol from core team?
-    pcoree : 4.e+6 #core elec power if iflcore:1 
-    pcorei : 4.e+6 #core ion power if iflcore:1
+    # pcoree&pcorei is psol from core team? or is this p at the core? Regardless, increase by 0.05
+    pcoree : 3.93e+6 #core elec power if iflcore:1 
+    pcorei : 3.93e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
     istewc: 2 #linear radial extrapolation condition for Te on outer wall
@@ -119,7 +119,7 @@ physics:
     
 
 neon:
-    afracs: 2.e-3
+    afracs: 1.e-4
 
 # transport coefficients
 diffusivities:
