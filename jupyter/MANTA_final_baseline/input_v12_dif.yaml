@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "reconverged_v12_p393_n225_imp1e4_d0.05_ke0.06_ki0.1_last_ii2.hdf5"
+savefile: "reconverged_v12_p3.93_n2.38_imp1e4_d0.05_ke0.06_ki0.1_last_ii2.hdf5"
 restart: 1
 
 species:
