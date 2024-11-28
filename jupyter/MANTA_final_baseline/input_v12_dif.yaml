@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "reconverged_v12_p3.93_n2.38_imp7.5e3_dp0.06_kep0.06_kip0.06_last_ii2.hdf5"
+savefile: "reconverged_v12_p3.93_n2.38_imp4e2_dp0.06_kep0.06_kip0.0226_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -119,7 +119,7 @@ physics:
     
 
 neon:
-    afracs: 8.5e-3
+    afracs: 4.e-2
 
 # transport coefficients
 diffusivities:
