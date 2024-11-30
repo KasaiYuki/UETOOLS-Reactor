@@ -3,7 +3,7 @@ from uedge.gridue import write_gridue
 from uetools import Case
 from Forthon import gchange
 from numpy import array, pi
-import plates_v12_morphed as pl #imports plates.py
+import plates_long as pl #imports plates.py
 
 def setGrid(steps=4, plot=True):
     """ Generates a HDF5/ASCII grid
