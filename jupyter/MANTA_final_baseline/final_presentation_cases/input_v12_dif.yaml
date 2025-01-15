@@ -1,0 +1,190 @@
+
+casename: "testcase"
+savefile: "reconverged_FINAL_v12_p3.93_n2.38_imp4e2_dp0.06_kep0.06_kip0.0226_last_ii2.hdf5"
+restart: 1
+
+species:
+    ngsp: 1     # No. of gas species
+    nhsp: 2     # No. of hydrogenic species
+    isimpon: 2  # Turns on impurity model no 6 (force-balance)
+
+    
+grid:
+    mhdgeo: 1   # Toroidal MHD equilibrium
+    geometry: "snull" #
+    isnonog: 1  # Evaluates nonorthogonal fluxes on grid
+    gengrid: 0  # Read grid from file
+    GridFileName: "gridue_v12_vertical" # Path to grid file
+    isgriduehdf5: 1 # Switch whether to read HDF5 gridue file
+    isudsym: 1
+    nxleg:
+        0: [16, 2]
+    nxcore:
+        0: [14, 4]
+
+solver:
+    svrpkg: "nksol"
+    premeth: "ilut"
+    lfililut: 200
+    lenplufac: 300
+    lenpfac: 200
+    rlx: 0.1
+    epscon1: 3.e-3
+    
+
+
+
+boundaryconditions:
+    gamsec: 0 # secondary electron emission
+    isphiofft: 0 # should fix straitions
+    isnicore: 
+        0: 1
+    ncore:
+        0: 2.38e+20
+    iflcore: 1
+    # pcoree&pcorei is psol from core team? or is this p at the core? Regardless, increase by 0.05
+    pcoree : 3.93e+6 #core elec power if iflcore:1 
+    pcorei : 3.93e+6 #core ion power if iflcore:1
+    # Boundary conditions left over from manta baseline inputs
+
+    istewc: 2 #linear radial extrapolation condition for Te on outer wall
+    istiwc: 2 #linear radial extrapolation condition for Ti outer wall
+    isnwcono : 2 #linear radial extrapolation condition for ni on outer wall
+    
+    isnwconi : 1 ##fixed ni:nwalli on PFR wall
+    nwalli : 1.e+18
+    istepfc : 1 #linear radial extrapolation condition for Te on PFR wall
+    istipfc : 1 #linear radial extrapolation condition for Ti on PFR wall
+    isupcore : 1 #=1 sets d(up)/dy:0
+
+
+    
+    bcee : 4.0 #target plate electron sheath coefficient
+    bcei : 2.5 #target plate ion sheath coefficient
+
+    istgwc : 0
+    istgpfc : 0
+
+    #From Core Team
+    #tcoree: 1024.21
+    #tcorei: 909.469
+    #ncoree: 2.2766.e+20
+    #ncorei: 2.2238.e+20
+    
+atoms:
+    ziin:
+        1: 0
+    ineudif: 2
+    isupgon:
+        0: 1
+    isngon:
+        0: 0
+    n0g:
+        0: 1.e+18
+    cngfx: 0
+    cngfy: 0
+    cngflox: 0
+    cngfloy: 0
+    ngbackg: 1.e+10
+    cngmom: 0
+    cmwall: 0
+    cngtgx: 0
+    cngtgy: 0
+    cfbgt: 0
+    kxn: 0
+    kyn: 0
+    kxe: 1
+
+
+physics:
+    minu: [2.5, 2.5]
+    istabon: 10
+    isrecmon: 1
+    islnlamcon: 1
+    lnlam: 12
+    isplflxlv: 1
+    isplflxlgx: 1
+    isplflxlgxy: 1
+    isplflxlvgx: 1
+    isplflxlvgxy: 1
+    iswflxlvgy: 1
+    isplflxltgx: 1
+    isplflxltgxy: 1
+    iswflxltgy: 1
+    isplflxl: 1
+    iswflxlvgy: 1
+    cngflox: 1
+    isupwi: 1
+    isupwo: 1
+    
+
+neon:
+    afracs: 4.e-2
+
+# transport coefficients
+diffusivities:
+    isbohmcalc: 0
+    difutm: 0.5
+    kyi: 0
+    
+    
+
+fluxlim:
+    isflxlde: 1
+    flalfe: 10
+    flalfi: 10
+    flalfv: 0.5
+    flgamv: 1
+    flalfgx: 1
+    flalfgy: 1
+    flalfgxy: 1
+    flalftgx: 1
+    flalftgy: 1
+    lgmax: 0.05
+    lgtmax: 0.05
+
+sources:
+    #Puff: albedo=1.0,igaso>0, pump: albedo~0.3,igaso=0
+    nwsor: 2 # Number of individual sources 
+    #           PUFF        PUMP
+    issorlb: [  0,          1   ] # Measured from left boundary?
+    # OUTER (big w legs)
+    jxsoro: [   1,          1   ] # 0=inner mesh region, 1=outer
+    matwso: [   1,          1   ] # Switch for material limits (use 1)
+    wgaso:  [   0.5,        0.3 ] # Source/sink width
+    xgaso:  [   0.7,        0.1 ] # Sink/source location from boundary 
+    albdso: [   1.0,        1.0 ] # Pump albedo
+    igaso:  [   300,        0   ] # Gas source strength (Amps)
+    # INNER (little w legs)
+    jxsori: [   1,          1   ] # 0=inner mesh region, 1=outer
+    matwsi: [   1,          1   ] # Switch for material limites (use 1)
+    wgasi:  [   0.3,        0.05] # Source/sink width
+    xgasi:  [   0.8,        0.0 ] # Sink/source location from boundary
+    albdsi: [   1.0,        0.3 ] # Pump albedo
+    igasi:  [   0,          0   ] # Gas source strength (Amps)
+
+
+
+differencing:
+    methn: 33
+    methu: 33
+    methe: 33
+    methi: 33
+    methg: 66
+
+
+equations:
+    isphion: 0
+    isphiofft: 0 # should fix straitions
+    isupon: 1
+    isnion: 1
+    isteon: 1
+    istion: 1
+
+recycling:
+    recycm: -0.95
+    recycp:
+        0: 0.99 #hydrogen recycling coeff at plates
+    recycw:
+        0: 0.99 #hydrogen recycling coeff at wall boundaries
+
