@@ -1,0 +1,194 @@
+attribute: <casename of </>> and <casename of </>>
+8 differences found
+attribute: <ctime of </>> and <ctime of </>>
+2 differences found
+attribute: <time of </>> and <time of </>>
+1 differences found
+dataset: </centered/bbb/ne> and </centered/bbb/ne>
+1296 differences found
+dataset: </centered/bbb/ng> and </centered/bbb/ng>
+2592 differences found
+dataset: </centered/bbb/ni> and </centered/bbb/ni>
+15506 differences found
+dataset: </centered/bbb/prad> and </centered/bbb/prad>
+1296 differences found
+dataset: </centered/bbb/pradhyd> and </centered/bbb/pradhyd>
+1296 differences found
+dataset: </centered/bbb/pradz> and </centered/bbb/pradz>
+14256 differences found
+dataset: </centered/bbb/psor> and </centered/bbb/psor>
+15552 differences found
+dataset: </centered/bbb/psorc> and </centered/bbb/psorc>
+2592 differences found
+dataset: </centered/bbb/psorcxg> and </centered/bbb/psorcxg>
+2592 differences found
+dataset: </centered/bbb/psordis> and </centered/bbb/psordis>
+1296 differences found
+dataset: </centered/bbb/psorg> and </centered/bbb/psorg>
+2592 differences found
+dataset: </centered/bbb/psorgc> and </centered/bbb/psorgc>
+1296 differences found
+dataset: </centered/bbb/psorrg> and </centered/bbb/psorrg>
+2592 differences found
+dataset: </centered/bbb/psorrgc> and </centered/bbb/psorrgc>
+1296 differences found
+dataset: </centered/bbb/psorxr> and </centered/bbb/psorxr>
+15552 differences found
+dataset: </centered/bbb/psorxrc> and </centered/bbb/psorxrc>
+2592 differences found
+dataset: </centered/bbb/te> and </centered/bbb/te>
+1256 differences found
+dataset: </centered/bbb/tg> and </centered/bbb/tg>
+2512 differences found
+dataset: </centered/bbb/ti> and </centered/bbb/ti>
+1256 differences found
+dataset: </convergence/t_start> and </convergence/t_start>
+1 differences found
+dataset: </grid/com/nxcore> and </grid/com/nxcore>
+1 differences found
+dataset: </grid/com/nxleg> and </grid/com/nxleg>
+1 differences found
+dataset: </postprocessed/bbb/engerr> and </postprocessed/bbb/engerr>
+1144 differences found
+dataset: </postprocessed/bbb/engilb> and </postprocessed/bbb/engilb>
+288 differences found
+dataset: </postprocessed/bbb/engirb> and </postprocessed/bbb/engirb>
+288 differences found
+dataset: </postprocessed/bbb/engwalli> and </postprocessed/bbb/engwalli>
+648 differences found
+dataset: </postprocessed/bbb/gdilb> and </postprocessed/bbb/gdilb>
+288 differences found
+dataset: </postprocessed/bbb/gdirb> and </postprocessed/bbb/gdirb>
+288 differences found
+dataset: </postprocessed/bbb/gwalli> and </postprocessed/bbb/gwalli>
+647 differences found
+dataset: </postprocessed/bbb/icxgas> and </postprocessed/bbb/icxgas>
+2 differences found
+dataset: </postprocessed/bbb/icxgas_tot> and </postprocessed/bbb/icxgas_tot>
+1 differences found
+dataset: </postprocessed/bbb/iion> and </postprocessed/bbb/iion>
+2 differences found
+dataset: </postprocessed/bbb/iion_tot> and </postprocessed/bbb/iion_tot>
+1 differences found
+dataset: </postprocessed/bbb/irecomb> and </postprocessed/bbb/irecomb>
+2 differences found
+dataset: </postprocessed/bbb/irecomb_tot> and </postprocessed/bbb/irecomb_tot>
+1 differences found
+dataset: </postprocessed/bbb/pbinde> and </postprocessed/bbb/pbinde>
+1 differences found
+dataset: </postprocessed/bbb/pbindrc> and </postprocessed/bbb/pbindrc>
+1 differences found
+dataset: </postprocessed/bbb/peirad> and </postprocessed/bbb/peirad>
+1144 differences found
+dataset: </postprocessed/bbb/pibirth> and </postprocessed/bbb/pibirth>
+1 differences found
+dataset: </postprocessed/bbb/pradht> and </postprocessed/bbb/pradht>
+1 differences found
+dataset: </postprocessed/bbb/pradimp> and </postprocessed/bbb/pradimp>
+11 differences found
+dataset: </postprocessed/bbb/pradimpt> and </postprocessed/bbb/pradimpt>
+1 differences found
+dataset: </postprocessed/bbb/pradiz> and </postprocessed/bbb/pradiz>
+1 differences found
+dataset: </postprocessed/bbb/pradrc> and </postprocessed/bbb/pradrc>
+1 differences found
+dataset: </postprocessed/bbb/pradzbind> and </postprocessed/bbb/pradzbind>
+1 differences found
+dataset: </postprocessed/bbb/prdiss> and </postprocessed/bbb/prdiss>
+1 differences found
+dataset: </postprocessed/bbb/pwr_pfwallh> and </postprocessed/bbb/pwr_pfwallh>
+42 differences found
+dataset: </postprocessed/bbb/pwr_pfwallz> and </postprocessed/bbb/pwr_pfwallz>
+42 differences found
+dataset: </postprocessed/bbb/pwr_plth> and </postprocessed/bbb/pwr_plth>
+48 differences found
+dataset: </postprocessed/bbb/pwr_pltz> and </postprocessed/bbb/pwr_pltz>
+48 differences found
+dataset: </postprocessed/bbb/pwr_wallh> and </postprocessed/bbb/pwr_wallh>
+54 differences found
+dataset: </postprocessed/bbb/pwr_wallz> and </postprocessed/bbb/pwr_wallz>
+54 differences found
+dataset: </postprocessed/bbb/sbindlb> and </postprocessed/bbb/sbindlb>
+23 differences found
+dataset: </postprocessed/bbb/sbindrb> and </postprocessed/bbb/sbindrb>
+23 differences found
+dataset: </postprocessed/bbb/sdelb> and </postprocessed/bbb/sdelb>
+24 differences found
+dataset: </postprocessed/bbb/sderb> and </postprocessed/bbb/sderb>
+24 differences found
+dataset: </postprocessed/bbb/sdilb> and </postprocessed/bbb/sdilb>
+24 differences found
+dataset: </postprocessed/bbb/sdirb> and </postprocessed/bbb/sdirb>
+24 differences found
+dataset: </postprocessed/bbb/sdrlb> and </postprocessed/bbb/sdrlb>
+24 differences found
+dataset: </postprocessed/bbb/sdrrb> and </postprocessed/bbb/sdrrb>
+24 differences found
+dataset: </postprocessed/bbb/sdtlb> and </postprocessed/bbb/sdtlb>
+24 differences found
+dataset: </postprocessed/bbb/sdtrb> and </postprocessed/bbb/sdtrb>
+24 differences found
+dataset: </postprocessed/bbb/spfwallr> and </postprocessed/bbb/spfwallr>
+42 differences found
+dataset: </postprocessed/bbb/swalle> and </postprocessed/bbb/swalle>
+54 differences found
+dataset: </postprocessed/bbb/swalli> and </postprocessed/bbb/swalli>
+54 differences found
+dataset: </postprocessed/bbb/swallr> and </postprocessed/bbb/swallr>
+54 differences found
+dataset: </postprocessed/bbb/swallt> and </postprocessed/bbb/swallt>
+54 differences found
+dataset: </postprocessed/bbb/swbind> and </postprocessed/bbb/swbind>
+54 differences found
+dataset: </restore/bbb/ngs> and </restore/bbb/ngs>
+2592 differences found
+dataset: </restore/bbb/nis> and </restore/bbb/nis>
+15506 differences found
+dataset: </restore/bbb/tes> and </restore/bbb/tes>
+1256 differences found
+dataset: </restore/bbb/tgs> and </restore/bbb/tgs>
+2512 differences found
+dataset: </restore/bbb/tis> and </restore/bbb/tis>
+1256 differences found
+dataset: </restore/bbb/ups> and </restore/bbb/ups>
+2448 differences found
+dataset: </setup/detected/alfe> and </setup/detected/alfe>
+10 differences found
+dataset: </setup/detected/betai> and </setup/detected/betai>
+10 differences found
+dataset: </setup/detected/sfscal> and </setup/detected/sfscal>
+21762 differences found
+dataset: </setup/detected/suscal> and </setup/detected/suscal>
+18398 differences found
+dataset: </staggered/bbb/feex> and </staggered/bbb/feex>
+1202 differences found
+dataset: </staggered/bbb/feey> and </staggered/bbb/feey>
+1242 differences found
+dataset: </staggered/bbb/feix> and </staggered/bbb/feix>
+1202 differences found
+dataset: </staggered/bbb/feiy> and </staggered/bbb/feiy>
+1242 differences found
+dataset: </staggered/bbb/fngx> and </staggered/bbb/fngx>
+2472 differences found
+dataset: </staggered/bbb/fngy> and </staggered/bbb/fngy>
+2479 differences found
+dataset: </staggered/bbb/fnix> and </staggered/bbb/fnix>
+14400 differences found
+dataset: </staggered/bbb/fniy> and </staggered/bbb/fniy>
+14901 differences found
+dataset: </staggered/bbb/up> and </staggered/bbb/up>
+2448 differences found
+dataset: </staggered/bbb/uup> and </staggered/bbb/uup>
+14848 differences found
+dataset: </staggered/bbb/v2cb> and </staggered/bbb/v2cb>
+14256 differences found
+dataset: </staggered/bbb/vex> and </staggered/bbb/vex>
+1292 differences found
+dataset: </staggered/bbb/vy> and </staggered/bbb/vy>
+14878 differences found
+dataset: </staggered/bbb/vycb> and </staggered/bbb/vycb>
+13662 differences found
+--------------------------------
+Some objects are not comparable
+--------------------------------
+Use -c for a list of objects.

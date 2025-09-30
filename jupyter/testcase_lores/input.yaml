@@ -1,12 +1,13 @@
 
 casename: "testcase"
-savefile: "nc20.hdf5"
+# savefile: "interpolated_16x8-32x16"
+savefile: 'temp_py_last_ii2.hdf5'
 restart: 1
 
 species:
     ngsp: 2     # No. of gas species
     nhsp: 2     # No. of hydrogenic species
-    isimpon: 6  # Turns on impurity model no 6 (force-balance)
+    isimpon: 7  # Turns on impurity model no 6 (force-balance)
     nzsp:       # Array of impurity species
         0: 6    # Turn on one impurity species, 6 charge-states
     
@@ -47,11 +48,12 @@ atoms:
     cfnidh: 0.2
 
 rates:
-    istabon: 10
+    istabon: 17
 
 carbon:
+    afracs: 1.0e-4
     ngbackg:
-        1: 1.e9
+        1: 0
     ingb: 2
     istgcon:
         1: 1
@@ -104,6 +106,19 @@ carbon:
         2: [1.e7, 1.e7, 1.e7, 1.e7, 1.e7, 1.e7]
     nwimin:
         2: [1.e7, 1.e7, 1.e7, 1.e7, 1.e7, 1.e7]
+    # npltsor: 1     #number sources on plates; must be <= 10
+    # sputtr : 1
+    # sputtrb: 1
+    # # Puffs: indices correspond to source # - limited by nwsor
+    # # Outer wall
+    # igspsorrb:
+    #     0: [2,0]  # Puffed species index (PYTHON OR BASIS INDICES?)
+    # igasrb: 
+    #     0: [30,   0]  # Gas currents from outer wall [Amp]
+    # ygasrb: 
+    #     0: [0.02,   0]  # Location of wall source: origin set by issorlb
+    # wgasrb:
+    #     0: [0.2, 0]  # Total Cosine widths of source
     
 diffusivities:
     difni: [1]

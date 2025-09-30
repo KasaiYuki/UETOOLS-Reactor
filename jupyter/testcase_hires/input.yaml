@@ -1,12 +1,12 @@
 
 casename: "testcase"
-savefile: "nc20.hdf5"
+savefile: "hires_ngbackg=1e3_last_ii2.hdf5"
 restart: 1
 
 species:
     ngsp: 2     # No. of gas species
     nhsp: 2     # No. of hydrogenic species
-    isimpon: 6  # Turns on impurity model no 6 (force-balance)
+    isimpon: 7  # Turns on impurity model no 6 (force-balance)
     nzsp:       # Array of impurity species
         0: 6    # Turn on one impurity species, 6 charge-states
     
@@ -50,10 +50,11 @@ rates:
     istabon: 10
 
 carbon:
+    afracs: 1e-4
 #    isngon:
 #        1: 1
     ngbackg:
-        1: 1.e9
+        1: 1.e3
     ingb: 2
     istgcon:
         1: 1
