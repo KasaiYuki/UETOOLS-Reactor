@@ -1,6 +1,6 @@
 
 casename: "testcase"
-savefile: "centaur_v12_p5.00_n2.38_imp1.1e2_dp0.06_kep0.06_kip0.0226_last_ii2.hdf5"
+savefile: "centaur_v12_p13.5MW_n2.187e20_Zeff3.7_last_ii2.hdf5"
 restart: 1
 
 species:
@@ -40,11 +40,11 @@ boundaryconditions:
     isnicore: 
         0: 1
     ncore:
-        0: 2.38e+20
+        0: 2.187e+20 #rho=0.92, very approximate
     iflcore: 1
     # pcoree&pcorei is psol from core team? or is this p at the core? Regardless, increase by 0.05
-    pcoree : 5.00e+6 #core elec power if iflcore:1 
-    pcorei : 5.00e+6 #core ion power if iflcore:1
+    pcoree : 3.375e+6 #core elec power if iflcore:1 
+    pcorei : 3.375e+6 #core ion power if iflcore:1
     # Boundary conditions left over from manta baseline inputs
 
     istewc: 2 #linear radial extrapolation condition for Te on outer wall
@@ -119,7 +119,7 @@ physics:
     
 
 neon:
-    afracs: 1.1e-2
+    afracs: 2.85e-2
 
 # transport coefficients
 diffusivities:
