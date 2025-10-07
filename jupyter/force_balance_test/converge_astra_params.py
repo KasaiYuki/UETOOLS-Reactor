@@ -1,0 +1,22 @@
+import os
+import sys
+import numpy as np
+import matplotlib.pyplot as plt
+from uedge import *
+from uedge.hdf5 import *
+#import plotmesh as pm
+from uetools import Case
+from uedge.gridue import write_gridue
+from Forthon import gchange
+
+c = Case('centaur_fb.yaml')
+
+c.populate()
+c.about.uedge_setup()
+bbb.isbcwdt=1
+# bbb.dtphi=1e-11
+# c.interpolate.solution(oldgrid="gridue_v15_orthogonal.hdf5", oldsave="fb_centaur_pcore=7.175_ncore=1.56_last_ii2.hdf5", newgrid="gridue_v15_vertical_coarse_1.hdf5", newsavename="interpolate_upscale_v15_vert.hdf5")
+print("HELP")
+c.converge(savefname="interpolate_upscale_v15_morph2_57", dtreal=1e-10)
+# c.solver.continuation_solve('ncore', target=1.56E20, savedir='ncore_down', dtreal=1e-11, index=0)
+
